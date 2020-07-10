@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>im Bored app</title>
+    <title>Home - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -20,9 +20,19 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=ABeeZee"
     />
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cabin:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+    />
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" />
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
@@ -31,7 +41,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css"
     />
-    <link rel="stylesheet" href="assets/css/Simple-Contact-Form.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
@@ -47,6 +56,7 @@
             data-bs-hover-animate="jello"
             src="assets/img/e0af9181-40f0-44cc-8be3-3d18cf07929e_200x200.png"
             style="width: 228px;" /></a
+
         ><button
           data-toggle="collapse"
           class="navbar-toggler text-right border rounded navbar-toggler-right"
@@ -200,21 +210,478 @@
             Just click on Start button to Start the App
           </p>
           <a
-            class="btn btn-primary btn-lg btn-default"
+            class="btn btn-primary btn-lg btn-default appStart-btn js-scroll-trigger"
             role="button"
-            href="app-typs.html"
             style="font-family: ABeeZee, sans-serif;"
             >Start</a
           >
+          <audio src="./assets/audio/truck1.mp3" id="appTruck"></audio>
         </div>
       </div>
-    </section> 
+    </section>
+    <section id="game-intro">
+      <h1
+        class="text-left game-intro-heading col-sm-12 component-header--title text-center"
+        data-aos="fade"
+        data-aos-duration="1300"
+        data-aos-delay="100"
+        style="font-family: Catamaran, sans-serif;"
+      >
+        What are you in the mood for ?<br />keep scrolling to see all the
+        typs&nbsp;&nbsp;<br /><br />
+      </h1>
+
+      <div class="game-typ">
+        <div class="container">
+          <div class="row game-typs-item">
+            <div onclick="appStart(type='cooking')"
+              class="col-sm-6 col-md-4 allTyps"
+              data-aos="fade"
+              data-aos-duration="1300"
+              data-aos-delay="100"
+            >
+              <a 
+                class="portfolio-link"
+                data-toggle="modal"
+                href="#portfolioModal1"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"></div>
+                </div>
+                <img
+                  class="img-fluid"
+                  data-bs-hover-animate="bounce"
+                  src="assets/img/undraw_cooking_lyxy.png"
+                />
+              </a>
+              <div class="portfolio-caption">
+                <p
+                  class="text-center text-muted"
+                  style="
+                    font-family: ABeeZee, sans-serif;
+                    font-size: 37px;
+                    font-weight: normal;
+                  "
+                >
+                Cooking
+                </p>
+              </div>
+            </div>
+            <div onclick="appStart(type=`social`)"
+              class="col-sm-6 col-md-4 allTyps"
+              data-aos="fade"
+              data-aos-duration="1300"
+              data-aos-delay="300"
+            >
+              <a 
+                class="portfolio-link"
+                data-toggle="modal"
+                href="#portfolioModal2"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"></div>
+                </div>
+                <img
+                  class="img-fluid"
+                  data-bs-hover-animate="bounce"
+                  src="assets/img/undraw_social_ideas_e8rj.png"
+                />
+              </a>
+              <div class="portfolio-caption">
+                <p
+                  class="text-center text-muted"
+                  style="font-size: 37px; font-family: ABeeZee, sans-serif;"
+                >
+                  Social
+                </p>
+              </div>
+            </div>
+            <div onclick="appStart(type=`busywork`)"
+              class="col-sm-6 col-md-4 allTyps"
+              data-aos="fade"
+              data-aos-duration="1300"
+              data-aos-delay="500"
+            >
+              <a 
+                class="portfolio-link"
+                data-toggle="modal"
+                href="#portfolioModal3"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"></div>
+                </div>
+                <img
+                  class="img-fluid"
+                  data-bs-hover-animate="bounce"
+                  src="assets/img/undraw_time_management_30iu.png"
+                />
+              </a>
+              <div class="portfolio-caption">
+                <p
+                  class="text-center text-muted"
+                  style="font-family: ABeeZee, sans-serif; font-size: 37px;"
+                >
+                  Busywork
+                </p>
+              </div>
+            </div>
+            <div onclick="appStart(type=`music`)"
+              class="col-sm-6 col-md-4 allTyps"
+              data-aos="fade"
+              data-aos-duration="1300"
+              data-aos-delay="100"
+            >
+              <a 
+                class="portfolio-link"
+                data-toggle="modal"
+                href="#portfolioModal4"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"></div>
+                </div>
+                <img
+                  class="img-fluid"
+                  data-bs-hover-animate="bounce"
+                  src="assets/img/undraw_compose_music_ovo2.png"
+                />
+              </a>
+              <div class="portfolio-caption">
+                <p
+                  class="text-center text-muted"
+                  style="font-family: ABeeZee, sans-serif; font-size: 37px;"
+                >
+                  Music
+                </p>
+              </div>
+            </div>
+            <div onclick="appStart(type=`relaxation`)"
+              class="col-sm-6 col-md-4 allTyps"
+              data-aos="fade"
+              data-aos-duration="1300"
+              data-aos-delay="300"
+            >
+              <a 
+                class="portfolio-link"
+                data-toggle="modal"
+                href="#portfolioModal5"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"></div>
+                </div>
+                <img
+                  class="img-fluid img-fluid"
+                  data-bs-hover-animate="bounce"
+                  src="assets/img/undraw_relaxation_1_wbr7.png"
+                />
+              </a>
+              <div class="portfolio-caption">
+                <p
+                  class="text-center text-muted"
+                  style="font-size: 37px; font-family: ABeeZee, sans-serif;"
+                >
+                  Relaxation
+                </p>
+              </div>
+            </div>
+            <div onclick="appStart(type=`charity`)"
+              class="col-sm-6 col-md-4 allTyps"
+              data-aos="fade"
+              data-aos-duration="1300"
+              data-aos-delay="500"
+            >
+              <a 
+                class="portfolio-link"
+                data-toggle="modal"
+                href="#portfolioModal6"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"></div>
+                </div>
+                <img
+                  class="img-fluid"
+                  data-bs-hover-animate="bounce"
+                  src="assets/img/undraw_gifts_btw0.png"
+                />
+              </a>
+              <div class="portfolio-caption">
+                <p
+                  class="text-center text-muted"
+                  style="font-size: 37px; font-family: ABeeZee, sans-serif;"
+                >
+                  Charity
+                </p>
+              </div>
+            </div>
+            <div onclick="appStart(type=`diy`)"
+              class="col-sm-6 col-md-4 allTyps"
+              data-aos="fade"
+              data-aos-duration="1300"
+              data-aos-delay="100"
+            >
+              <a
+                class="portfolio-link"
+                data-toggle="modal"
+                href="#portfolioModal6"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"></div>
+                </div>
+                <img
+                  class="img-fluid"
+                  data-bs-hover-animate="bounce"
+                  src="assets/img/undraw_book_reading_kx9s.png"
+                />
+              </a>
+              <div class="portfolio-caption">
+                <p
+                  class="text-center text-muted"
+                  style="
+                    font-size: 37px;
+                    font-family: ABeeZee, sans-serif;
+                    font-weight: normal;
+                  "
+                >
+                  Do it yourself
+                </p>
+              </div>
+            </div>
+            <div onclick="appStart(type=`photography`)"
+              class="col-sm-6 col-md-4 allTyps"
+              data-aos="fade"
+              data-aos-duration="1300"
+              data-aos-delay="300"
+            >
+              <a
+                class="portfolio-link"
+                data-toggle="modal"
+                href="#portfolioModal6"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"></div>
+                </div>
+                <img
+                  class="img-fluid"
+                  data-bs-hover-animate="bounce"
+                  src="assets/img/undraw_through_the_park_lxnl%20(1).png"
+                />
+              </a>
+              <div class="portfolio-caption">
+                <p
+                  class="text-center text-muted"
+                  style="font-size: 37px; font-family: ABeeZee, sans-serif;"
+                >
+                  Photography
+                </p>
+              </div>
+            </div>
+            <div onclick="appStart(type=`edcution`)"
+              class="col-sm-6 col-md-4 allTyps"
+              data-aos="fade"
+              data-aos-duration="1300"
+              data-aos-delay="500"
+            >
+              <a
+                class="portfolio-link"
+                data-toggle="modal"
+                href="#portfolioModal6"
+              >
+                <div class="portfolio-hover">
+                  <div class="portfolio-hover-content"></div>
+                </div>
+                <img
+                  class="img-fluid"
+                  data-bs-hover-animate="bounce"
+                  src="assets/img/undraw_Graduation_ktn0.png"
+                />
+              </a>
+              <div class="portfolio-caption">
+                <p
+                  class="text-center text-muted"
+                  style="font-size: 37px; font-family: ABeeZee, sans-serif;"
+                >
+                  Edcution
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="game-participants">
+      <div class="container">
+        <h3
+          class="text-left game-intro-heading col-sm-12 component-header--title text-center"
+          data-aos="fade"
+          data-aos-duration="1300"
+          data-aos-delay="100"
+          style="
+            font-family: Catamaran, sans-serif;
+            font-size: 65px; /*margin: 0px;*/ /*margin-top: 6.5rem;*/
+          "
+        >
+          With how many people?
+        </h3>
+        <div class="row persons-number">
+          <div onclick="participantsNumber(nr=`1`)"
+            class="col-sm-6 col-md-4 participantsNumber"
+            data-aos="fade"
+            data-aos-duration="1300"
+            data-aos-delay="100"
+          >
+            <a
+              class="portfolio-link"
+              data-toggle="modal"
+              href="#portfolioModal1"
+            >
+              <img
+                class="img-fluid"
+                data-bs-hover-animate="bounce"
+                src="assets/img/balloon_monochromatic.png"
+              />
+            </a>
+            <div class="portfolio-caption">
+              <p
+                class="text-center text-muted"
+                style="
+                  font-family: Cabin, sans-serif;
+                  font-size: 30px;
+                  font-weight: bold;
+                "
+              >
+                1 Person
+              </p>
+            </div>
+          </div>
+          <div onclick="appStart(number=`2`)"
+            class="col-sm-6 col-md-4 participantsNumber"
+            data-aos="fade"
+            data-aos-duration="1300"
+            data-aos-delay="300"
+          >
+            <a
+              class="portfolio-link"
+              data-toggle="modal"
+              href="#portfolioModal2"
+            >
+              <img
+                class="img-fluid"
+                data-bs-hover-animate="bounce"
+                src="assets/img/radio_presenter_monochromatic.png"
+              />
+            </a>
+            <div class="portfolio-caption">
+              <p
+                class="text-center text-muted"
+                style="
+                  font-size: 30px;
+                  font-family: Cabin, sans-serif;
+                  font-weight: bold;
+                "
+              >
+                2&nbsp;<strong>Persons</strong><br />
+              </p>
+            </div>
+          </div>
+          <div onclick="appStart(number=`3`)"
+            class="col-sm-6 col-md-4 participantsNumber"
+            data-aos="fade"
+            data-aos-duration="1300"
+            data-aos-delay="500"
+          >
+            <a
+              class="portfolio-link"
+              data-toggle="modal"
+              href="#portfolioModal3"
+            >
+              <img
+                class="img-fluid"
+                data-bs-hover-animate="bounce"
+                src="assets/img/startup__monochromatic.png"
+              />
+            </a>
+            <div class="portfolio-caption">
+              <p
+                class="text-center text-muted"
+                style="
+                  font-size: 30px;
+                  font-family: Cabin, sans-serif;
+                  font-weight: bold;
+                "
+              >
+                3 Persons
+              </p>
+            </div>
+          </div>
+          <div onclick="appStart(number=`4`)"
+            class="col-sm-6 col-md-4 participantsNumber"
+            data-aos="fade"
+            data-aos-duration="1300"
+            data-aos-delay="100"
+          >
+            <a
+              class="portfolio-link"
+              data-toggle="modal"
+              href="#portfolioModal4"
+            >
+              <img
+                class="img-fluid"
+                data-bs-hover-animate="bounce"
+                src="assets/img/party_monochromatic.png"
+              />
+            </a>
+            <div class="portfolio-caption">
+              <p
+                class="text-center text-muted"
+                style="
+                  font-size: 30px;
+                  font-weight: bold;
+                  font-family: Cabin, sans-serif;
+                "
+              >
+                4 Persons
+              </p>
+            </div>
+          </div>
+          <div onclick="appStart(number=`5`)"
+            class="col-sm-6 col-md-4 participantsNumber"
+            data-aos="fade"
+            data-aos-duration="1300"
+            data-aos-delay="300"
+          >
+            <a
+              class="portfolio-link"
+              data-toggle="modal"
+              href="#portfolioModal5"
+            >
+              <img
+                class="img-fluid"
+                data-bs-hover-animate="bounce"
+                src="assets/img/diversity__monochromatic.png"
+              />
+            </a>
+            <div class="portfolio-caption">
+              <p
+                class="text-center text-muted"
+                style="
+                  font-size: 30px;
+                  font-weight: bold;
+                  font-family: Cabin, sans-serif;
+                "
+              >
+                5 Persons
+              </p>
+            </div>
+            <section id="suggestion-section"></section>
+            <section id="results-section"></section>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="assets/js/grayscale.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/typed.js"></script>
   </body>
