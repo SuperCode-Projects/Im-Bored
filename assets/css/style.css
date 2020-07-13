@@ -1,18 +1,19 @@
 .intro-h1 {
   padding: 0;
-  font-size: 5vw;
   margin: 0;
   position: relative;
   word-wrap: unset;
+  font-family: 'Caveat', cursive;
 }
 
 .back-to-top {
   position: fixed;
-  right: 1rem;
-  bottom: 2rem;
-  font-size: 2rem;
+  right: 0.5rem;
+  bottom: 1rem;
+  font-size: 4rem;
+  transform: rotate(90deg);
   z-index: 10000;
-  color: rgb(188,188,188);
+  color: rgba(0, 0, 0, 0.9)
 }
 
 .lets-start-img {
@@ -75,16 +76,17 @@ body {
   background-color: white;
   display: block;
 }
+.app-style-heading{
+  padding-top:3rem;
+  font-weight: 800;
+}
 
 @media (min-width: 576px) {
   .game-intro-heading {
     color: rgb(33,37,41);
     font-weight: 800;
-    text-decoration: none;
-    text-transform: none;
     letter-spacing: -3px;
-    font-size: 4rem;
-    padding-top: 6rem;
+    padding-top: 2.5rem;
   }
 }
 
@@ -97,6 +99,14 @@ body {
     letter-spacing: -3px;
     font-size: 2rem;
     padding-top: 6rem;
+  }
+  .intro-h1 {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    font-size: 3rem;
+    word-wrap: unset;
+    font-family: 'Caveat', cursive;
   }
 }
 
@@ -165,29 +175,257 @@ body {
   object-fit: cover;
 }
 
+#app-activities{
+  background: white;
+  width: auto;
+  color: rgb(33,37,41);
+  cursor: pointer;
+  display: none;
+}
 #game-intro {
   height: auto;
-}
-
-
-#game-intro {
   display: none;
 }
 
 #game-participants img {
   height: 200px;
-  width: 100vh;
+  object-fit: contain;
 }
-
 #game-participants {
   background-color: white;
-  display: block;
+  display: none;
 }
 
-#suggestion-section {
+
+
+
+.btn--doar {
+  border:none;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  padding: 15px;
+  padding-right: 0;
+  background-color: #dc143c;
+  transition: all .5s ease; 
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+
+}
+
+.btn--doar:hover { 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);  
+}
+
+.btn--doar:after {
+  content: "\f004";
+  color: #1d1d1d;
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  right: -55px;
+  transition: all 0.2s ease;
+
+}
+
+
+
+#suggestion-result{
+  height:130vh;
+  background-color: white;
+}
+.btn--doar:hover:after {
+  margin: -5px 15px;
+  right: 0px;
+}
+
+.btn--doar2 {
+  border:none;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  padding: 15px;
+  padding-right: 0;
+  background-color: #1f1f1f;
+  transition: all .5s ease; 
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+
+}
+
+.btn--doar2:hover { 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);  
+  color: crimson;
+}
+
+.btn--doar2:after {
+  content: "\f01e";
+  color: crimson;
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  right: -55px;
+  transition: all 0.2s ease;
+}
+
+.btn--doar2:hover:after {
+  margin: -5px 15px;
+  right: 0px;
+}
+
+
+.btn--doar3 {
+  border:none;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  padding: 15px;
+  padding-right: 0;
+  background-color: #3e396e;
+  transition: all .5s ease; 
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+
+}
+
+.btn--doar3:hover { 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);  
+}
+
+.btn--doar3:after {
+  content: "\f1de";
+  color: #1d1d1d;
+  font-size: 1rem;
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  right: -55px;
+  transition: all 0.2s ease;
+
+}
+.btn--doar3:hover:after {
+  margin: -5px 15px;
+  right: 0px;
+}
+
+.btn--doar4 {
+  border:none;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  padding: 15px;
+  padding-right: 0;
+  background-color: #DC143C;
+  transition: all .5s ease; 
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+
+}
+
+.btn--doar4:hover { 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);  
+}
+
+.btn--doar4:after {
+  content: "\f004";
+  color: #1d1d1d;
+  font-size: 1rem;
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  right: -55px;
+  transition: all 0.2s ease;
+
+}
+.btn--doar4:hover:after {
+  margin: -5px 15px;
+  right: 0px;
+}
+
+.btn--doar5 {
+  border:none;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  padding: 15px;
+  padding-right: 0;
+  background-color: #1f1f1f;
+  transition: all .5s ease; 
+  -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+
+}
+
+.btn--doar5:hover { 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);  
+  color: #dc143c;
+}
+
+.btn--doar5:after {
+  content: "\f01e";
+  color: crimson;
+  font-size: 1rem;
+  font-family: FontAwesome;
+  display: inline-block;
+  position: relative;
+  right: -55px;
+  transition: all 0.2s ease;
+
+}
+.btn--doar5:hover:after {
+  margin: -5px 15px;
+  right: 0px;
+}
+
+@keyframes anim1 {
+  0%{transform: scaleY(0.5);opacity: 0;}
+  50%{transform: translateY(-10px) scaleY(1.4); opacity: 1;}
+  100%{transform: translateY(-20px) scaleY(0.5);opacity: 0;}
+}
+@media (min-width:992px) {
+  .portfolio-item:hover .caption {
+    background-color: rgba(220,20,60,0.9);
+  }
+}
+
+.portfolio-item img {
+  height: 500px;
+}
+
+
+iframe{
+  max-width: 100%;
+  height: 400px;
+  
+}
+#suggestion-section-for-TypsMode,#suggestion-section,#suggestion-section-for-random-activities{
   height: 100vh;
   background-color: white;
   display: none;
-  color: #1d1d1d;
+  color: #1d1d1d ;
+  padding-top: 4rem;
+  font-weight: 700;
+}
+#result-section-for-random,#result-section-for-TypsMode,#result-section-for-participants{
+  background-color: white;
+  height: 130vh;
+  width: auto;
+  display: none;
 }
 
+#last-result1{
+  padding-top: 12rem;
+  color:#1d1d1d ;
+  height: auto;
+  width: auto;
+}
