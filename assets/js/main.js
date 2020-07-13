@@ -330,6 +330,7 @@ const participantsNumber = (nr) => {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
+      choisedOption[1]=data.type;
       coisedActivity[0] = data.activity;
       let apiInformation = new BoredApi(
         data.activity,
