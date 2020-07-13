@@ -430,8 +430,8 @@ iframe{
   width: auto;
 }
 footer{
-  padding-top: 8rem;
-  height: 100vh;
+  padding-top:50vh;
+  height: 144vh;
   width: auto;
   background-color: white;
   color: #212529;

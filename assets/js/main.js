@@ -303,7 +303,7 @@ class BoredApi {
 
 /* Fetch appTyps Api */
 const appTyps = (type) => {
-  let url = `http://www.boredapi.com/api/activity?type=${type}`;
+  let url = `https://www.boredapi.com/api/activity?type=${type}`;
   choisedOption[1] = type;
   choisedApi[0] = url;
 
@@ -324,7 +324,7 @@ const appTyps = (type) => {
 
 /* Fetch participant Api */
 const participantsNumber = (nr) => {
-  let url = `http://www.boredapi.com/api/activity?participants=${nr}`;
+  let url = `https://www.boredapi.com/api/activity?participants=${nr}`;
   choisedOption[0] = nr;
   choisedApi[0] = url;
   fetch(url)
@@ -343,7 +343,7 @@ const participantsNumber = (nr) => {
 
 /*  Fetch Rendom Api */
 const rendomActivityes = () => {
-  let url = `http://www.boredapi.com/api/activity/`;
+  let url = `https://www.boredapi.com/api/activity/`;
   choisedApi[0] = url;
   fetch(url)
     .then((response) => response.json())
@@ -519,4 +519,4 @@ const scrollingToFooter = () => {
 };
 //////////////////////////////////////////////////////////////////////////////
 
-/* end of the Scripts :))  */
+/* end of Scripts :))  */
