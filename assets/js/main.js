@@ -1,10 +1,10 @@
 (function ($) {
-  "use strict"; 
-/*   Smooth scrolling using jQuery easing */
+  "use strict";
+  /*   Smooth scrolling using jQuery easing */
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (
       location.pathname.replace(/^\//, "") ==
-      this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       var target = $(this.hash);
@@ -23,23 +23,20 @@
   });
   //////////////////////////////////////////////////////////////////////////////
 
-
   /* Closes responsive menu when a scroll trigger link is clicked */
   $(".js-scroll-trigger").click(function () {
     $(".navbar-collapse").collapse("hide");
   });
   //////////////////////////////////////////////////////////////////////////////
 
-
-   /* Activate scrollspy to add active class to navbar items on scroll */
+  /* Activate scrollspy to add active class to navbar items on scroll */
   $("body").scrollspy({
     target: "#mainNav",
     offset: 56,
   });
   //////////////////////////////////////////////////////////////////////////////
 
-
-   /* Collapse Navbar */
+  /* Collapse Navbar */
   var navbarCollapse = function () {
     if ($("#mainNav").offset().top > 100) {
       $("#mainNav").addClass("navbar-shrink");
@@ -51,21 +48,19 @@
   navbarCollapse();
   //////////////////////////////////////////////////////////////////////////////
 
-
-   /* Collapse the navbar when page is scrolled */
+  /* Collapse the navbar when page is scrolled */
   $(window).scroll(navbarCollapse);
-   /* Hide navbar when modals trigger */
+  /* Hide navbar when modals trigger */
   $(".portfolio-modal").on("show.bs.modal", function (e) {
     $(".navbar").addClass("d-none");
   });
   $(".portfolio-modal").on("hidden.bs.modal", function (e) {
     $(".navbar").removeClass("d-none");
   });
-})(jQuery); 
-  //////////////////////////////////////////////////////////////////////////////
+})(jQuery);
+//////////////////////////////////////////////////////////////////////////////
 
-
-  /* type sittings on the Header */
+/* type sittings on the Header */
 $(document).ready(function () {
   var typed = $(".typed");
   $(function () {
@@ -80,10 +75,9 @@ $(document).ready(function () {
     });
   });
 });
-  //////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 
-
-  /* back to top icon Sittings */
+/* back to top icon Sittings */
 $(window).scroll(function () {
   if ($(this).scrollTop() > 100) {
     $(".back-to-top").fadeIn("slow");
@@ -104,10 +98,8 @@ $(".back-to-top").click(function () {
 });
 //////////////////////////////////////////////////////////////////////////////
 
-
 //AppJs
 //////////////////////////////////////////////////////////////////////////////
-
 
 /*  to scorolling to app-activities Section */
 $(".appStart-btn").click(function () {
@@ -123,7 +115,6 @@ $(".appStart-btn").click(function () {
   );
 });
 //////////////////////////////////////////////////////////////////////////////
-
 
 /* to scorolling from random-activities to suggestion-section-for-random-activities Section  */
 $("#random-activities").click(function () {
@@ -144,7 +135,6 @@ $("#random-activities").click(function () {
 });
 //////////////////////////////////////////////////////////////////////////////
 
-
 /*  to scorolling to game-intro Section */
 $("#for-mode").click(function () {
   $("#suggestion-result").css("display", "none");
@@ -162,7 +152,6 @@ $("#for-mode").click(function () {
 });
 //////////////////////////////////////////////////////////////////////////////
 
-
 /* to scorolling to suggestion-section-for-TypsMode from game-intro Section  */
 $("#game-intro").click(function () {
   $("#suggestion-section-for-random-activities").css("display", "none");
@@ -179,7 +168,6 @@ $("#game-intro").click(function () {
   );
 });
 //////////////////////////////////////////////////////////////////////////////
-
 
 /* to scorolling to game-participants Section */
 $("#for-friends").click(function () {
@@ -201,7 +189,6 @@ $("#for-friends").click(function () {
 });
 //////////////////////////////////////////////////////////////////////////////
 
-
 /* to scorolling to suggestion section from game-participants Section  */
 $(".participantsNumber").click(function () {
   $("#suggestion-result").css("display", "none");
@@ -221,26 +208,34 @@ $(".participantsNumber").click(function () {
 });
 //////////////////////////////////////////////////////////////////////////////
 
-
 /* for saving the choised Options and feth the Api (Datanbank) */
 let choisedOption = [];
 let choisedApi = [];
 let coisedActivity = [];
 let ytVedios = [];
-let youTubeDataOut=[]
+let youTubeDataOut = [];
 //////////////////////////////////////////////////////////////////////////////
 
-
-const appStyls=document.querySelector("#app-activities");
-const appOptionsTyp=document.querySelector("#game-intro");
-const appOptionsParticipants=document.querySelector("#game-participants");
-const suggestionSectionTyp = document.querySelector("#suggestion-section-for-TypsMode");
-const suggestionSectionParticipants = document.querySelector("#suggestion-section");
-const suggestionSectionRendom = document.querySelector("#suggestion-section-for-random-activities");
+const appStyls = document.querySelector("#app-activities");
+const appOptionsTyp = document.querySelector("#game-intro");
+const appOptionsParticipants = document.querySelector("#game-participants");
+const suggestionSectionTyp = document.querySelector(
+  "#suggestion-section-for-TypsMode"
+);
+const suggestionSectionParticipants = document.querySelector(
+  "#suggestion-section"
+);
+const suggestionSectionRendom = document.querySelector(
+  "#suggestion-section-for-random-activities"
+);
 const resultSectionTyp = document.querySelector("#result-section-for-TypsMode");
-const resultSectionParticipants = document.querySelector("#result-section-for-participants");
-const resultSectionRendom = document.querySelector("#result-section-for-random");
-
+const resultSectionParticipants = document.querySelector(
+  "#result-section-for-participants"
+);
+const resultSectionRendom = document.querySelector(
+  "#result-section-for-random"
+);
+const footer = document.querySelector("footer");
 /* BoredApi Class for API Information and Output */
 class BoredApi {
   constructor(activity, type, participants) {
@@ -306,7 +301,6 @@ class BoredApi {
 }
 //////////////////////////////////////////////////////////////////////////////
 
-
 /* Fetch appTyps Api */
 const appTyps = (type) => {
   let url = `http://www.boredapi.com/api/activity?type=${type}`;
@@ -328,7 +322,6 @@ const appTyps = (type) => {
 };
 //////////////////////////////////////////////////////////////////////////////
 
-
 /* Fetch participant Api */
 const participantsNumber = (nr) => {
   let url = `http://www.boredapi.com/api/activity?participants=${nr}`;
@@ -347,7 +340,6 @@ const participantsNumber = (nr) => {
     });
 };
 //////////////////////////////////////////////////////////////////////////////
-
 
 /*  Fetch Rendom Api */
 const rendomActivityes = () => {
@@ -368,12 +360,11 @@ const rendomActivityes = () => {
 };
 //////////////////////////////////////////////////////////////////////////////
 
-
 /* uploed another Suggestion button */
 const sugNotLiked = () => {
   suggestionSectionTyp.innerHTML = "";
-  resultSectionTyp.style.display="none";
-  resultSectionParticipants.style.display="none";
+  resultSectionTyp.style.display = "none";
+  resultSectionParticipants.style.display = "none";
   fetch(choisedApi)
     .then((response) => response.json())
     .then((data) => {
@@ -394,31 +385,25 @@ const sugNotLiked = () => {
 };
 //////////////////////////////////////////////////////////////////////////////
 
-
 /* anotherChois button */
 const anotherChois = () => {
-  if (
-    suggestionSectionTyp.style.display == "block" 
-    
-  ) {
-    appOptionsTyp.scrollIntoView({block: "start", behavior: "smooth"});
+  if (suggestionSectionTyp.style.display == "block") {
+    appOptionsTyp.scrollIntoView({ block: "start", behavior: "smooth" });
   } else if (suggestionSectionParticipants.style.display == "block") {
-    appOptionsParticipants.scrollIntoView({block: "end", behavior: "smooth"});
-  }
-  else{
-    appStyls.scrollIntoView({block: "start", behavior: "smooth"});
+    appOptionsParticipants.scrollIntoView({ block: "end", behavior: "smooth" });
+  } else {
+    appStyls.scrollIntoView({ block: "start", behavior: "smooth" });
   }
 };
 //////////////////////////////////////////////////////////////////////////////
 
-
 /* fetch Youtube Api from the sugLiked button */
 const sugLiked = () => {
-  resultSectionTyp.style.display="none";
-  resultSectionParticipants.style.display="none";
-  resultSectionRendom.style.display="none";
+  resultSectionTyp.style.display = "none";
+  resultSectionParticipants.style.display = "none";
+  resultSectionRendom.style.display = "none";
   ytVedios = new Array();
-  let ytApiKey = "AIzaSyB1ALe6X6Wu4vsUrBLpeIWH4in78gQiNlw";
+  let ytApiKey = "AIzaSyCSdVLCrnq2MW_FN044GCQVNvThw8pJSE4";
   let ytUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&key=${ytApiKey}&type=video&q=${coisedActivity[0]}`;
   fetch(ytUrl)
     .then((response) => response.json())
@@ -427,9 +412,9 @@ const sugLiked = () => {
       data.items.forEach((item) => {
         ytVedios.push(item.id.videoId);
       });
-      const ytVediosRandom= Math.floor(Math.random() * 5);
-      const ytVediosRandomOutput=ytVedios[ytVediosRandom];
-       youTubeDataOut[0]=`<div id="last-result1">
+      const ytVediosRandom = Math.floor(Math.random() * 5);
+      const ytVediosRandomOutput = ytVedios[ytVediosRandom];
+      youTubeDataOut[0] = `<div id="last-result1">
       <h1
       class="col-sm-12 component-header--title text-center display-4"
       data-aos="fade-right"
@@ -460,7 +445,7 @@ const sugLiked = () => {
               </h2>
               <div data-aos="fade-left" data-aos-delay="380">
               <p class="h3"style="font-family: Catamaran, sans-serif;font-weight:400;">Is this video helpful?</p>
-              <button data-aos="fade-left" data-aos-delay="400" class="btn btn--doar4"style="font-family: Catamaran, sans-serif;font-weight:900;">Yeh sure!</button>
+              <button data-aos="fade-left" data-aos-delay="400" class="btn btn--doar4"style="font-family: Catamaran, sans-serif;font-weight:900;"onclick="scrollingToFooter()">Yeh sure!</button>
               <button data-aos="fade-left" data-aos-delay="600" class="btn btn--doar5"style="font-family: Catamaran, sans-serif;font-weight:900;"onclick="vedioNotLiked()">Nuh not realy!</button>
 
               </div>
@@ -469,44 +454,69 @@ const sugLiked = () => {
           </div>
         </div>
       </div>
-    </div>`
-    
+    </div>`;
+
       if (suggestionSectionTyp.style.display == "block") {
-        resultSectionTyp.style.display="block";
-        resultSectionTyp.innerHTML=youTubeDataOut[0];
-        resultSectionTyp.scrollIntoView({block: "start", behavior: "smooth"});
-        
+        resultSectionTyp.style.display = "block";
+        resultSectionTyp.innerHTML = youTubeDataOut[0];
+        resultSectionTyp.scrollIntoView({ block: "start", behavior: "smooth" });
       } else if (suggestionSectionParticipants.style.display == "block") {
-        resultSectionParticipants.style.display="block";
-        resultSectionParticipants.innerHTML=youTubeDataOut[0];
-        resultSectionParticipants.scrollIntoView({block: "start", behavior: "smooth"});
-        
-      }
-      else{
-        resultSectionRendom.style.display="block"
-        resultSectionRendom.innerHTML=youTubeDataOut[0];
-        resultSectionRendom.scrollIntoView({block: "start", behavior: "smooth"});
-        
+        resultSectionParticipants.style.display = "block";
+        resultSectionParticipants.innerHTML = youTubeDataOut[0];
+        resultSectionParticipants.scrollIntoView({
+          block: "start",
+          behavior: "smooth",
+        });
+      } else {
+        resultSectionRendom.style.display = "block";
+        resultSectionRendom.innerHTML = youTubeDataOut[0];
+        resultSectionRendom.scrollIntoView({
+          block: "start",
+          behavior: "smooth",
+        });
       }
     });
-    
+};
+//////////////////////////////////////////////////////////////////////////////
+
+/* for changing the Vedio if the User did not find the Vedio helpful */
+const vedioNotLiked = () => {
+  sugLiked();
+  if (resultSectionTyp.style.display == "block") {
+    resultSectionTyp.innerHTML = youTubeDataOut[0];
+  } else if (resultSectionParticipants.style.display == "block") {
+    resultSectionParticipants.innerHTML = youTubeDataOut[0];
+  } else {
+    resultSectionRendom.innerHTML = youTubeDataOut[0];
+  }
+  console.log(choisedOption);
 };
 //////////////////////////////////////////////////////////////////////////////
 
 
-/* for changing the Vedio if the User did not find the Vedio helpful */
-const vedioNotLiked=()=>{
-  sugLiked();
-  if ( resultSectionTyp.style.display=="block") {
-    resultSectionTyp.innerHTML=youTubeDataOut[0];
-  }
-  else if (resultSectionParticipants.style.display=="block"){
-    resultSectionParticipants.innerHTML=youTubeDataOut[0];
-  }
-  else{
-    resultSectionRendom.innerHTML=youTubeDataOut[0];
-  }
-  console.log(choisedOption);
-}
+/*  scrollingToFooter*/
+const scrollingToFooter = () => {
+  footer.style.display = "block";
+  footer.innerHTML = `<section>
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+            <div><img class="footerLogo img-fluid" data-aos="fade-left"data-aos-once="true" data-aos-delay="200" src="assets/img/footerLogo.png"></div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+                <div class="d-lg-flex align-items-lg-center">
+                    <h3 data-aos="fade-right" data-aos-once="true"class="display-4" style="margin: 0px;font-family: Catamaran, sans-serif;font-weight: 800;">Made with</h3><i class="fa fa-heart pulse animated infinite" style="font-size: 61px;margin: 0;margin-top: -7px;margin-left: 11px;color: #dc143c;"></i></div>
+                <p data-aos="fade-right" data-aos-delay="200"data-aos-once="true" style="font-family: Catamaran, sans-serif;font-size: 19px;margin-right: 0px;margin-top: 11px;margin-bottom: 0;">Created by Ahmad Karbouj as&nbsp; Final project for&nbsp;<br>Junior Full-Stack Web-Developer<br><br></p>
+                <a href="https://github.com/LayorDaymor"target="blank"class="socialMedia"><i class="fa fa-github" data-aos="fade-right" data-aos-delay="400"data-aos-once="true" style="font-size: 64px;margin-left: 0px;margin-right: 10px;"></i></a>
+                <a href="https://www.instagram.com/ahmad_karbouj/?hl=de"target="blank"class="socialMedia"><i class="fa fa-instagram" data-aos="fade-up" data-aos-delay="550"data-aos-once="true" style="font-size: 64px;margin-right: 10px;"></i></a>
+                <a href="https://de-de.facebook.com/Layor.Daymor"target="blank"class="socialMedia"> <i class="fa fa-facebook-square"  data-aos="fade-left" data-aos-delay="600"data-aos-once="true" style="font-size: 64px;margin-right: 10px;"></i></a>
+        </div>
+    </div>
+</div>
+</section>`;
+  footer.scrollIntoView({ block: "start", behavior: "smooth" });
+};
 //////////////////////////////////////////////////////////////////////////////
+
 /* end of the Scripts :))  */

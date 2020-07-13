@@ -409,7 +409,7 @@ iframe{
   
 }
 #suggestion-section-for-TypsMode,#suggestion-section,#suggestion-section-for-random-activities{
-  height: 100vh;
+  height: 130vh;
   background-color: white;
   display: none;
   color: #1d1d1d ;
@@ -428,4 +428,19 @@ iframe{
   color:#1d1d1d ;
   height: auto;
   width: auto;
+}
+footer{
+  padding-top: 8rem;
+  height: 100vh;
+  width: auto;
+  background-color: white;
+  color: #212529;
+  display: none;
+}
+.socialMedia{
+  color: #212529;
+  transition: 0.3s ease-in;
+}
+.socialMedia:hover{
+  color: crimson;
 }
